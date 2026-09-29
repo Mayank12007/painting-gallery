@@ -1,0 +1,877 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_1",
+      "email": "vidushi@gallerist.in",
+      "password": "$2a$10$mo/PLchYzvFru0O1TbVT0Ov9OoNJc.kgi7PhEHvwktkHPKH3QBGvS",
+      "name": "Devina Rao (Curator & Admin)",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
+      "phone": "+91 9817258887",
+      "createdAt": "2026-09-28T17:11:50.024Z"
+    },
+    {
+      "id": "usr_buyer_1",
+      "email": "buyer@example.com",
+      "password": "$2a$10$wbYG.Hzqx1MWnk9yJMED0eKTRCILxKq6RUs.5RybzWXsj0qjla0oS",
+      "name": "Aarav Sharma",
+      "role": "customer",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "phone": "+91 98111 87654",
+      "createdAt": "2026-09-28T17:11:50.025Z"
+    },
+    {
+      "id": "usr_1790616526253_4tnt",
+      "createdAt": "2026-09-28T17:28:46.253Z",
+      "role": "customer",
+      "email": "mayankishpuniyani644@gmail.com",
+      "name": "mayank",
+      "phone": "9817258887",
+      "password": "$2a$10$4Y6P3grswIwG4lnC7lybTOI7dD1lm1zIMc2qXTfsF8edNG9kUCjAe",
+      "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=mayank"
+    }
+  ],
+  "paintings": [
+    {
+      "id": "art-1790665208857",
+      "createdAt": "2026-09-29T07:00:08.857Z",
+      "coaNumber": "GLR-2026-6823",
+      "inStock": true,
+      "stockQuantity": 1,
+      "featured": false,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled in Sturdy Art Tube)",
+          "price": 0,
+          "desc": "Ships safely rolled in heavy PVC tube"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas (Gallery Wrapped)",
+          "price": 2000,
+          "desc": "Stretched on solid wood bars, ready to hang"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Handcrafted Teak Floating Frame",
+          "price": 4200,
+          "desc": "Solid teak floating frame with modern reveal"
+        },
+        {
+          "id": "black_frame",
+          "name": "Minimalist Matte Black Frame",
+          "price": 3600,
+          "desc": "Contemporary matte black finish"
+        },
+        {
+          "id": "gold_frame",
+          "name": "Royal Antique Gold Leaf Frame",
+          "price": 5400,
+          "desc": "Hand-finished museum gold leaf frame"
+        }
+      ],
+      "title": "][po",
+      "artist": ";lkjnkl",
+      "artistBio": "Fine artist represented by Gallerist.",
+      "category": "Abstract",
+      "medium": "Oil on Fine Belgian Linen",
+      "style": "Contemporary Fine Art",
+      "orientation": "vertical",
+      "dimensions": "36\" x 48\" (91.4 x 121.9 cm)",
+      "year": 2026,
+      "price": 501,
+      "originalPrice": 1000,
+      "description": "lkjhbnkjh",
+      "image": "/uploads/painting-1790665208849-373071888.png",
+      "discount": 50
+    },
+    {
+      "id": "art-1790615950726",
+      "createdAt": "2026-09-28T17:19:10.726Z",
+      "coaNumber": "GLR-2026-5457",
+      "inStock": false,
+      "stockQuantity": 0,
+      "featured": false,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled in Sturdy Art Tube)",
+          "price": 0,
+          "desc": "Ships safely rolled in heavy PVC tube"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas (Gallery Wrapped)",
+          "price": 2000,
+          "desc": "Stretched on solid wood bars, ready to hang"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Handcrafted Teak Floating Frame",
+          "price": 4200,
+          "desc": "Solid teak floating frame with modern reveal"
+        },
+        {
+          "id": "black_frame",
+          "name": "Minimalist Matte Black Frame",
+          "price": 3600,
+          "desc": "Contemporary matte black finish"
+        },
+        {
+          "id": "gold_frame",
+          "name": "Royal Antique Gold Leaf Frame",
+          "price": 5400,
+          "desc": "Hand-finished museum gold leaf frame"
+        }
+      ],
+      "title": "Mystic Himalayas at Sunset",
+      "artist": "Virendra Kashyap",
+      "artistBio": "Fine artist represented by Gallerist.",
+      "category": "Landscape & Scenery",
+      "medium": "Oil on Belgian Linen",
+      "style": "Contemporary",
+      "orientation": "vertical",
+      "dimensions": "36\" x 24\"",
+      "year": 2026,
+      "price": 38000,
+      "originalPrice": 48000,
+      "description": "Deep twilight hues casting purple and gold light across snowclad Himalayan crests.",
+      "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "discount": 21
+    },
+    {
+      "id": "art-3",
+      "title": "Symphony in Indigo & Raw Ochre",
+      "artist": "Kabir V. Mehta",
+      "artistBio": "Acclaimed non-objective abstractionist whose large scale canvases have been showcased in Mumbai, London, and Dubai.",
+      "category": "Abstract",
+      "medium": "Mixed Media & Pumice Texture on Canvas",
+      "style": "Abstract Expressionism",
+      "orientation": "square",
+      "dimensions": "40\" x 40\" (101.6 x 101.6 cm)",
+      "year": 2024,
+      "price": 54000,
+      "originalPrice": 68000,
+      "discount": 21,
+      "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80",
+      "description": "A commanding dialogue between deep indigo blues, warm natural earth tones, and sharp rhythmic scrapings. The heavy sculptural texture captures ambient lighting dramatically, making it a showstopper for modern spaces.",
+      "inStock": true,
+      "stockQuantity": 0,
+      "coaNumber": "GLR-2024-8843",
+      "featured": true,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled in Sturdy Art Tube)",
+          "price": 0,
+          "desc": "Ships rolled safely, ready for your custom framing"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas (Gallery Wrapped)",
+          "price": 2000,
+          "desc": "Canvas stretched over kiln-dried pine wood bars"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Handcrafted Teakwood Floating Frame",
+          "price": 4400,
+          "desc": "Luxury natural teakwood floater frame"
+        },
+        {
+          "id": "black_frame",
+          "name": "Minimalist Matte Black Frame",
+          "price": 3700,
+          "desc": "Sleek architectural matte black frame"
+        }
+      ],
+      "roomScale": 1.1,
+      "updatedAt": "2026-09-29T07:00:27.118Z"
+    },
+    {
+      "id": "art-4",
+      "title": "The Flute of Vrindavan (Radha Krishna)",
+      "artist": "Devendra Joshi",
+      "artistBio": "Hailing from Jaipur, Devendra weaves classical Indian miniature aesthetics into grand contemporary compositions.",
+      "category": "Spiritual & Devotional",
+      "medium": "Natural Pigments & Acrylic on Stretched Canvas",
+      "style": "Neo-Classical Indian",
+      "orientation": "vertical",
+      "dimensions": "30\" x 45\" (76.2 x 114.3 cm)",
+      "year": 2024,
+      "price": 39500,
+      "originalPrice": 52000,
+      "discount": 24,
+      "image": "https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=1200&q=80",
+      "description": "A soulful tribute to eternal divine love. Krishna playing the celestial flute beneath the Kadamba boughs, surrounded by peacock plumes and sacred lotuses, painted with jewel-like lapis lazuli and emerald greens.",
+      "inStock": true,
+      "stockQuantity": 1,
+      "coaNumber": "GLR-2024-8844",
+      "featured": false,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled in Sturdy Art Tube)",
+          "price": 0,
+          "desc": "Ships rolled safely"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas",
+          "price": 1800,
+          "desc": "Ready to hang stretched canvas"
+        },
+        {
+          "id": "gold_frame",
+          "name": "Royal Antique Gold Leaf Frame",
+          "price": 5200,
+          "desc": "Handcrafted ornamental gold frame"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Teakwood Frame",
+          "price": 4200,
+          "desc": "Solid teak floating frame"
+        }
+      ],
+      "roomScale": 1.05
+    },
+    {
+      "id": "art-5",
+      "title": "Monsoon Serenade over Alleppey",
+      "artist": "Thomas Kurian",
+      "artistBio": "Kerala-based watercolorist and plein-air artist known for atmospheric weather and reflections.",
+      "category": "Landscape & Scenery",
+      "medium": "Watercolor on 640gsm Arches 100% Cotton Rag",
+      "style": "Atmospheric Impressionism",
+      "orientation": "horizontal",
+      "dimensions": "42\" x 28\" (106.7 x 71.1 cm)",
+      "year": 2023,
+      "price": 34000,
+      "originalPrice": 42000,
+      "discount": 19,
+      "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=1200&q=80",
+      "description": "Dramatic monsoon clouds sweeping across emerald backwaters lined with coconut palms. Masterful wet-on-wet watercolor washes capturing the scent of fresh petrichor and shimmering tropical water.",
+      "inStock": true,
+      "stockQuantity": 1,
+      "coaNumber": "GLR-2024-8845",
+      "featured": true,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled in Sturdy Art Tube)",
+          "price": 0,
+          "desc": "Ships rolled safely"
+        },
+        {
+          "id": "stretched",
+          "name": "Acid-Free Gallery Mount",
+          "price": 2100,
+          "desc": "Archival mounting on rigid conservation board"
+        },
+        {
+          "id": "black_frame",
+          "name": "Matte Black Frame with 2\" White Mat",
+          "price": 4200,
+          "desc": "Museum-glass conservation frame with passepartout"
+        }
+      ],
+      "roomScale": 1.15
+    },
+    {
+      "id": "art-6",
+      "title": "Royal Rajputana: Pride of Marwar",
+      "artist": "Sunita Verma",
+      "artistBio": "Recipient of the National Lalit Kala Akademi award, Sunita brings majestic Rajasthani regal traditions to life.",
+      "category": "Figurative & Portrait",
+      "medium": "Oil & Real Gold Filigree on Stretched Linen",
+      "style": "Regal Figurative",
+      "orientation": "vertical",
+      "dimensions": "36\" x 54\" (91.4 x 137.2 cm)",
+      "year": 2024,
+      "price": 75000,
+      "originalPrice": 95000,
+      "discount": 21,
+      "image": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1200&q=80",
+      "description": "An aristocratic Rajasthani noblewoman adorned in traditional Kundan jewelry, royal crimson silk poshak, and delicate veil. Exceptional details in the golden embroidery and soulful gaze reflecting courage and grace.",
+      "inStock": false,
+      "stockQuantity": 0,
+      "coaNumber": "GLR-2024-8846",
+      "featured": true,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled in Art Tube)",
+          "price": 0,
+          "desc": "Ships rolled safely"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas",
+          "price": 2400,
+          "desc": "Stretched on solid kiln-dried pine wood"
+        },
+        {
+          "id": "gold_frame",
+          "name": "Royal Ornate Antique Gold Frame",
+          "price": 6500,
+          "desc": "Carved gold museum frame fitting a royal masterpiece"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Handcrafted Teak Floating Frame",
+          "price": 5100,
+          "desc": "Rich warm timber finish"
+        }
+      ],
+      "roomScale": 1.25
+    },
+    {
+      "id": "art-7",
+      "title": "Urban Rhapsody: Mumbai Metro Twilight",
+      "artist": "Aarav Singhania",
+      "artistBio": "Architecture graduate turned contemporary artist exploring speed, urbanization, and nocturnal color rhythms.",
+      "category": "Modern & Contemporary",
+      "medium": "Palette Knife Heavy Impasto Oil on Canvas",
+      "style": "Contemporary Urban Expressionism",
+      "orientation": "horizontal",
+      "dimensions": "50\" x 30\" (127.0 x 76.2 cm)",
+      "year": 2024,
+      "price": 58000,
+      "originalPrice": 72000,
+      "discount": 19,
+      "image": "https://images.unsplash.com/photo-1549887534-1541e9326642?auto=format&fit=crop&w=1200&q=80",
+      "description": "Bold, energetic palette knife strokes portraying the vibrant night pulse of Marine Drive and Mumbai's skyline. Neon reflections on rainy asphalt contrast against the deep cobalt twilight sky.",
+      "inStock": true,
+      "stockQuantity": 1,
+      "coaNumber": "GLR-2024-8847",
+      "featured": false,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled)",
+          "price": 0,
+          "desc": "Rolled in heavy PVC tube"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas",
+          "price": 2200,
+          "desc": "Stretched on solid wood frame"
+        },
+        {
+          "id": "black_frame",
+          "name": "Sleek Matte Black Shadowbox",
+          "price": 4400,
+          "desc": "Dramatic contrast modern frame"
+        }
+      ],
+      "roomScale": 1.2
+    },
+    {
+      "id": "art-8",
+      "title": "Tree of Abundance: Contemporary Madhubani",
+      "artist": "Meera Devi & Sanjay Jha",
+      "artistBio": "Master artisans from Mithila, Bihar, blending generational GI-tagged folk traditions with contemporary scale.",
+      "category": "Traditional & Folk Art",
+      "medium": "Natural Mineral Colors & Acrylic on Canvas",
+      "style": "Madhubani / Mithila Folk Art",
+      "orientation": "square",
+      "dimensions": "36\" x 36\" (91.4 x 91.4 cm)",
+      "year": 2024,
+      "price": 28500,
+      "originalPrice": 36000,
+      "discount": 21,
+      "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80",
+      "description": "An intricate celebration of the Tree of Life teeming with dancing peacocks, fish, sun and moon deities. Hand-drawn with bamboo nibs and colored with extracts of turmeric, indigo, and forest soot.",
+      "inStock": true,
+      "stockQuantity": 1,
+      "coaNumber": "GLR-2024-8848",
+      "featured": true,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled)",
+          "price": 0,
+          "desc": "Ships safely rolled"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas",
+          "price": 1800,
+          "desc": "Stretched on wooden bars"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Natural Sheesham/Teakwood Frame",
+          "price": 3900,
+          "desc": "Complements traditional Indian folk art"
+        }
+      ],
+      "roomScale": 1.05
+    },
+    {
+      "id": "art-9",
+      "title": "Serenade of the Lotus Pond",
+      "artist": "Priyanshu Patel",
+      "artistBio": "Vadodara fine arts alumni famous for tranquil botanicals and Japanese-inspired Zen simplicity.",
+      "category": "Modern & Contemporary",
+      "medium": "Acrylic, Oil & Gold Dust on Stretched Canvas",
+      "style": "Zen Minimalist",
+      "orientation": "horizontal",
+      "dimensions": "44\" x 30\" (111.8 x 76.2 cm)",
+      "year": 2024,
+      "price": 42000,
+      "originalPrice": 55000,
+      "discount": 24,
+      "image": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
+      "description": "Blooming sacred pink lotuses floating gracefully on emerald and jade green waters, dusted with subtle gold highlights that glisten in natural daylight. Creates an aura of calm and mindfulness.",
+      "inStock": true,
+      "stockQuantity": 1,
+      "coaNumber": "GLR-2024-8849",
+      "featured": false,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled)",
+          "price": 0,
+          "desc": "Ships safely in tube"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas",
+          "price": 2000,
+          "desc": "Ready to hang"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Light Oak / Teak Floater Frame",
+          "price": 4200,
+          "desc": "Enhances Zen aesthetic"
+        }
+      ],
+      "roomScale": 1.15
+    },
+    {
+      "id": "art-10",
+      "title": "Enlightenment Under the Bodhi Tree",
+      "artist": "Tenzin Norbu",
+      "artistBio": "Dharamshala trained Thangka artist who crafts meditative contemporary Buddhist art for world collectors.",
+      "category": "Spiritual & Devotional",
+      "medium": "Gouache & Gold Pigment on Treated Cotton Canvas",
+      "style": "Tibetan & Himalayan Modern Sacred",
+      "orientation": "vertical",
+      "dimensions": "32\" x 48\" (81.3 x 121.9 cm)",
+      "year": 2024,
+      "price": 52000,
+      "originalPrice": 65000,
+      "discount": 20,
+      "image": "https://images.unsplash.com/photo-1576769267415-9642010aa962?auto=format&fit=crop&w=1200&q=80",
+      "description": "Lord Buddha seated in the Dhyana Mudra (meditation posture) under the sprawling sacred Bodhi tree, surrounded by geometric mandalas and serene indigo aura. Conveys profound stillness and spiritual grace.",
+      "inStock": true,
+      "stockQuantity": 1,
+      "coaNumber": "GLR-2024-8850",
+      "featured": true,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled in Sturdy Art Tube)",
+          "price": 0,
+          "desc": "Ships safely rolled"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas",
+          "price": 2100,
+          "desc": "Stretched on wooden bars"
+        },
+        {
+          "id": "gold_frame",
+          "name": "Antique Gilded Frame",
+          "price": 5400,
+          "desc": "Rich gold frame accentuating the sacred aura"
+        },
+        {
+          "id": "black_frame",
+          "name": "Satin Black Frame",
+          "price": 3900,
+          "desc": "Contemporary minimalist frame"
+        }
+      ],
+      "roomScale": 1.15
+    },
+    {
+      "id": "art-11",
+      "title": "Golden Meadow: Himalayan Autumn",
+      "artist": "Rameshwar Sen",
+      "artistBio": "Landscape specialist who spends months traversing the Garhwal and Kumaon Himalayas capturing alpine textures.",
+      "category": "Landscape & Scenery",
+      "medium": "Oil on Linen Board",
+      "style": "Realist Landscape",
+      "orientation": "horizontal",
+      "dimensions": "36\" x 24\" (91.4 x 61.0 cm)",
+      "year": 2023,
+      "price": 31000,
+      "originalPrice": 38000,
+      "discount": 18,
+      "image": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80",
+      "description": "Golden alpine pastures in late autumn with snow-capped peaks in the background, warm afternoon shadows, and rustic shepherd trails. Exceptional depth and radiant color harmony.",
+      "inStock": true,
+      "stockQuantity": 1,
+      "coaNumber": "GLR-2024-8851",
+      "featured": false,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed",
+          "price": 0,
+          "desc": "Rolled in protective tube"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Gallery Wrap",
+          "price": 1600,
+          "desc": "Ready to hang"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Rustic Wood Frame",
+          "price": 3600,
+          "desc": "Warm natural wood finish"
+        }
+      ],
+      "roomScale": 1.05
+    },
+    {
+      "id": "art-12",
+      "title": "Chromatic Mirage #4",
+      "artist": "Zoya Alvi",
+      "artistBio": "Experimental abstract painter known for fluid dynamics, resin layers, and optical color vibrations.",
+      "category": "Abstract",
+      "medium": "Acrylic, Alcohol Inks & Resin on Birch Panel",
+      "style": "Fluid Abstract",
+      "orientation": "square",
+      "dimensions": "36\" x 36\" (91.4 x 91.4 cm)",
+      "year": 2024,
+      "price": 46000,
+      "originalPrice": 58000,
+      "discount": 21,
+      "image": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1200&q=80",
+      "description": "Swirling currents of lapis, metallic copper, pearlescent white, and deep teal sealed under a high-gloss museum resin finish that mirrors glass. Changes color tone as you move across the room.",
+      "inStock": false,
+      "stockQuantity": 0,
+      "coaNumber": "GLR-2024-8852",
+      "featured": true,
+      "framingOptions": [
+        {
+          "id": "stretched",
+          "name": "Gallery Ready (Cradled Panel)",
+          "price": 0,
+          "desc": "Sides finished in satin white, ready to hang"
+        },
+        {
+          "id": "black_frame",
+          "name": "Black Floater Frame",
+          "price": 3800,
+          "desc": "Sleek contemporary floater frame"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Natural Teak Floater Frame",
+          "price": 4200,
+          "desc": "Warm wooden contrast"
+        }
+      ],
+      "roomScale": 1.1
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-2026-83560",
+      "createdAt": "2026-09-29T08:09:44.863Z",
+      "orderStatus": "Received",
+      "paymentStatus": "Paid",
+      "userId": "usr_buyer_1",
+      "customerName": "Aarav Sharma",
+      "customerEmail": "buyer@example.com",
+      "customerPhone": "+91 98111 87654",
+      "shippingAddress": {
+        "street": "Flat 402, Lotus Residency, Indiranagar 100ft Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560038",
+        "country": "India"
+      },
+      "items": [
+        {
+          "paintingId": "art-12",
+          "title": "Chromatic Mirage #4",
+          "artist": "Zoya Alvi",
+          "image": "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1200&q=80",
+          "price": 46000,
+          "framing": {
+            "id": "stretched",
+            "name": "Gallery Ready (Cradled Panel)",
+            "price": 0,
+            "desc": "Sides finished in satin white, ready to hang"
+          },
+          "quantity": 1,
+          "itemTotal": 46000,
+          "coaNumber": "GLR-2024-8852"
+        }
+      ],
+      "subtotal": 46000,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 46000,
+      "paymentMethod": "COD",
+      "trackingNumber": "GLR-4664293"
+    },
+    {
+      "id": "ORD-2026-77335",
+      "createdAt": "2026-09-29T07:47:31.576Z",
+      "orderStatus": "Received",
+      "paymentStatus": "Paid",
+      "userId": "usr_admin_1",
+      "customerName": "Devina Rao (Curator & Admin)",
+      "customerEmail": "vidushi@gallerist.in",
+      "customerPhone": "+91 9817258887",
+      "shippingAddress": {
+        "street": "Flat 402, Lotus Residency, Indiranagar 100ft Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560038",
+        "country": "India"
+      },
+      "items": [
+        {
+          "paintingId": "art-6",
+          "title": "Royal Rajputana: Pride of Marwar",
+          "artist": "Sunita Verma",
+          "image": "https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=1200&q=80",
+          "price": 75000,
+          "framing": {
+            "id": "rolled",
+            "name": "Unframed (Rolled in Art Tube)",
+            "price": 0,
+            "desc": "Ships rolled safely"
+          },
+          "quantity": 1,
+          "itemTotal": 75000,
+          "coaNumber": "GLR-2024-8846"
+        }
+      ],
+      "subtotal": 75000,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 75000,
+      "paymentMethod": "COD",
+      "trackingNumber": "GLR-7194545"
+    },
+    {
+      "id": "ORD-2026-54111",
+      "createdAt": "2026-09-29T06:58:24.403Z",
+      "orderStatus": "Received",
+      "paymentStatus": "Paid",
+      "userId": "usr_1790616526253_4tnt",
+      "customerName": "mayank",
+      "customerEmail": "mayankishpuniyani644@gmail.com",
+      "customerPhone": "9817258887",
+      "shippingAddress": {
+        "street": "Flat 402, Lotus Residency, Indiranagar 100ft Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560038",
+        "country": "India"
+      },
+      "items": [
+        {
+          "paintingId": "art-1",
+          "title": "Cosmic Awakening: Lord Ganesha",
+          "artist": "Ananya Sen",
+          "image": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?auto=format&fit=crop&w=1200&q=80",
+          "price": 48500,
+          "framing": {
+            "id": "rolled",
+            "name": "Unframed (Rolled in Sturdy Art Tube)",
+            "price": 0,
+            "desc": "Ships rolled safely, ready for your custom framing"
+          },
+          "quantity": 1,
+          "itemTotal": 48500,
+          "coaNumber": "GLR-2024-8841"
+        }
+      ],
+      "subtotal": 48500,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 48500,
+      "paymentMethod": "UPI (aarav@okhdfcbank)",
+      "trackingNumber": "GLR-9467677"
+    },
+    {
+      "id": "ORD-2026-51298",
+      "createdAt": "2026-09-29T04:37:30.664Z",
+      "orderStatus": "Received",
+      "paymentStatus": "Paid",
+      "userId": "usr_1790616526253_4tnt",
+      "customerName": "mayank",
+      "customerEmail": "mayankishpuniyani644@gmail.com",
+      "customerPhone": "9817258887",
+      "shippingAddress": {
+        "street": "Flat 402, Lotus Residency, Indiranagar 100ft Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560038",
+        "country": "India"
+      },
+      "items": [
+        {
+          "paintingId": "art-1790615950726",
+          "title": "Mystic Himalayas at Sunset",
+          "artist": "Virendra Kashyap",
+          "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+          "price": 38000,
+          "framing": {
+            "id": "rolled",
+            "name": "Unframed (Rolled in Sturdy Art Tube)",
+            "price": 0,
+            "desc": "Ships safely rolled in heavy PVC tube"
+          },
+          "quantity": 1,
+          "itemTotal": 38000,
+          "coaNumber": "GLR-2026-5457"
+        }
+      ],
+      "subtotal": 38000,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 38000,
+      "paymentMethod": "UPI (aarav@okhdfcbank)",
+      "trackingNumber": "GLR-1473269"
+    },
+    {
+      "id": "ORD-2026-89807",
+      "createdAt": "2026-09-29T03:57:17.841Z",
+      "orderStatus": "Received",
+      "paymentStatus": "Paid",
+      "userId": "usr_1790616526253_4tnt",
+      "customerName": "mayank",
+      "customerEmail": "mayankishpuniyani644@gmail.com",
+      "customerPhone": "9817258887",
+      "shippingAddress": {
+        "street": "Flat 402, Lotus Residency, Indiranagar 100ft Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "201310",
+        "country": "India"
+      },
+      "items": [
+        {
+          "paintingId": "art-1790654163310",
+          "title": "ytrfghu",
+          "artist": "kjnmm",
+          "image": "/uploads/painting-1790654163302-341872405.png",
+          "price": 78415415854,
+          "framing": {
+            "id": "rolled",
+            "name": "Unframed (Rolled in Sturdy Art Tube)",
+            "price": 0,
+            "desc": "Ships safely rolled in heavy PVC tube"
+          },
+          "quantity": 1,
+          "itemTotal": 78415415854,
+          "coaNumber": "GLR-2026-4556"
+        }
+      ],
+      "subtotal": 78415415854,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 78415415854,
+      "paymentMethod": "COD",
+      "trackingNumber": "GLR-2195779"
+    },
+    {
+      "id": "ORD-2026-81335",
+      "createdAt": "2026-09-28T17:29:31.466Z",
+      "orderStatus": "Received",
+      "paymentStatus": "Paid",
+      "userId": "usr_1790616526253_4tnt",
+      "customerName": "mayank",
+      "customerEmail": "mayankishpuniyani644@gmail.com",
+      "customerPhone": "9817258887",
+      "shippingAddress": {
+        "street": "Flat 402, Lotus Residency, Indiranagar 100ft Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560038",
+        "country": "India"
+      },
+      "items": [
+        {
+          "paintingId": "art-3",
+          "title": "Symphony in Indigo & Raw Ochre",
+          "artist": "Kabir V. Mehta",
+          "image": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80",
+          "price": 54000,
+          "framing": {
+            "id": "rolled",
+            "name": "Unframed (Rolled in Sturdy Art Tube)",
+            "price": 0,
+            "desc": "Ships rolled safely, ready for your custom framing"
+          },
+          "quantity": 1,
+          "itemTotal": 54000,
+          "coaNumber": "GLR-2024-8843"
+        }
+      ],
+      "subtotal": 54000,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 54000,
+      "paymentMethod": "UPI (aarav@okhdfcbank)",
+      "trackingNumber": "GLR-3420340"
+    },
+    {
+      "id": "ORD-2024-9102",
+      "userId": "usr_buyer_1",
+      "customerName": "Aarav Sharma",
+      "customerEmail": "buyer@example.com",
+      "customerPhone": "+91 98111 87654",
+      "shippingAddress": {
+        "street": "Flat 402, Lotus Residency, Indiranagar 100ft Road",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "pincode": "560038",
+        "country": "India"
+      },
+      "items": [
+        {
+          "paintingId": "art-5",
+          "title": "Monsoon Serenade over Alleppey",
+          "artist": "Thomas Kurian",
+          "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?auto=format&fit=crop&w=600&q=80",
+          "price": 34000,
+          "framing": {
+            "id": "black_frame",
+            "name": "Matte Black Frame with 2\" White Mat",
+            "price": 4200
+          },
+          "quantity": 1,
+          "itemTotal": 38200,
+          "coaNumber": "GLR-2024-8845"
+        }
+      ],
+      "subtotal": 38200,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 38200,
+      "paymentMethod": "UPI (Google Pay)",
+      "paymentStatus": "Paid",
+      "orderStatus": "Dispatched",
+      "trackingNumber": "BLUEDART-IND-7782193",
+      "createdAt": "2026-09-26T17:11:50.025Z"
+    }
+  ]
+}

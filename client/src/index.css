@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #e3b264;
+    color: #1c1917;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-cormorant {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom Gallery Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #e1edff;
+}
+::-webkit-scrollbar-thumb {
+  background: #79562c;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a48f76;
+}
+
+/* Luxury Gold & Bronze Accent gradients */
+.gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #aa771c 50%, #8b5e34 100%);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #b59677 0%, #8c6d48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Certificate border */
+.certificate-border {
+  border: 12px double #b59677;
+  box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px #b59677;
+}
+
+/* Wall Texture for Room Mockup */
+.wall-texture {
+  background-image: radial-gradient(rgba(0,0,0,0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
