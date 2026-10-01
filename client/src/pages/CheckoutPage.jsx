@@ -5,9 +5,6 @@ import {
   Lock, 
   Truck, 
   Award, 
-  CreditCard, 
-  Smartphone, 
-  Building, 
   Banknote,
   CheckCircle2,
   ArrowLeft,
@@ -32,8 +29,7 @@ export default function CheckoutPage() {
     country: 'India'
   });
 
-  const [paymentMethod, setPaymentMethod] = useState('UPI');
-  const [upiId, setUpiId] = useState('aarav@okhdfcbank');
+  const [paymentMethod] = useState('COD');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -292,89 +288,53 @@ export default function CheckoutPage() {
             </div>
           </div>
 
-          {/* 2. Payment Method Simulation */}
+          {/* 2. Payment Method — COD Only */}
           <div className="bg-white p-6 rounded-2xl border border-[#ded8cb] shadow-sm space-y-4">
             <div className="flex items-center gap-2 pb-3 border-b border-zinc-100">
               <span className="w-6 h-6 rounded-full bg-[#8b5e34] text-white flex items-center justify-center text-xs font-bold">
                 2
               </span>
               <h3 className="font-serif text-lg font-bold text-zinc-900">
-                Payment Option
+                Payment Method
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-              <div
-                onClick={() => setPaymentMethod('UPI')}
-                className={`p-3.5 rounded-xl border cursor-pointer transition flex items-center gap-3 ${
-                  paymentMethod === 'UPI' ? 'border-[#8b5e34] bg-[#faf5ee]' : 'border-[#ded8cb] bg-white'
-                }`}
-              >
-                <Smartphone size={20} className="text-[#8b5e34]" />
-                <div>
-                  <p className="font-semibold text-zinc-900">UPI / QR (Instant)</p>
-                  <p className="text-[10px] text-zinc-500">Google Pay, PhonePe, Paytm</p>
-                </div>
+            {/* COD Card */}
+            <div className="p-4 rounded-xl border-2 border-[#8b5e34] bg-[#faf5ee] flex items-start gap-4">
+              <div className="p-2.5 rounded-lg bg-[#8b5e34]/10">
+                <Banknote size={24} className="text-[#8b5e34]" />
               </div>
-
-              <div
-                onClick={() => setPaymentMethod('Card')}
-                className={`p-3.5 rounded-xl border cursor-pointer transition flex items-center gap-3 ${
-                  paymentMethod === 'Card' ? 'border-[#8b5e34] bg-[#faf5ee]' : 'border-[#ded8cb] bg-white'
-                }`}
-              >
-                <CreditCard size={20} className="text-[#8b5e34]" />
-                <div>
-                  <p className="font-semibold text-zinc-900">Credit / Debit Card</p>
-                  <p className="text-[10px] text-zinc-500">Visa, MasterCard, RuPay</p>
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <p className="font-bold text-zinc-900 text-sm">Pay on Delivery (COD)</p>
+                  <span className="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded-full">AVAILABLE</span>
                 </div>
-              </div>
-
-              <div
-                onClick={() => setPaymentMethod('NetBanking')}
-                className={`p-3.5 rounded-xl border cursor-pointer transition flex items-center gap-3 ${
-                  paymentMethod === 'NetBanking' ? 'border-[#8b5e34] bg-[#faf5ee]' : 'border-[#ded8cb] bg-white'
-                }`}
-              >
-                <Building size={20} className="text-[#8b5e34]" />
-                <div>
-                  <p className="font-semibold text-zinc-900">Net Banking</p>
-                  <p className="text-[10px] text-zinc-500">HDFC, ICICI, SBI, Axis</p>
-                </div>
-              </div>
-
-              <div
-                onClick={() => setPaymentMethod('COD')}
-                className={`p-3.5 rounded-xl border cursor-pointer transition flex items-center gap-3 ${
-                  paymentMethod === 'COD' ? 'border-[#8b5e34] bg-[#faf5ee]' : 'border-[#ded8cb] bg-white'
-                }`}
-              >
-                <Banknote size={20} className="text-[#8b5e34]" />
-                <div>
-                  <p className="font-semibold text-zinc-900">Pay on Delivery (COD)</p>
-                  <p className="text-[10px] text-zinc-500">Inspection before payment</p>
+                <p className="text-xs text-zinc-600 mt-1">
+                  Inspect the artwork at your doorstep before making payment. Pay cash or UPI to the delivery executive.
+                </p>
+                <div className="mt-3 grid grid-cols-2 gap-2 text-[11px]">
+                  <div className="flex items-center gap-1.5 text-zinc-600">
+                    <CheckCircle2 size={13} className="text-emerald-600 shrink-0" />
+                    <span>No advance payment</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-zinc-600">
+                    <CheckCircle2 size={13} className="text-emerald-600 shrink-0" />
+                    <span>Inspect before paying</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-zinc-600">
+                    <CheckCircle2 size={13} className="text-emerald-600 shrink-0" />
+                    <span>100% safe & secure</span>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-zinc-600">
+                    <CheckCircle2 size={13} className="text-emerald-600 shrink-0" />
+                    <span>Available across India</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {paymentMethod === 'UPI' && (
-              <div className="bg-[#faf7f2] p-4 rounded-xl border border-[#ded8cb] space-y-2 mt-2">
-                <label className="block text-xs font-semibold text-zinc-700">UPI ID / VPA</label>
-                <input
-                  type="text"
-                  placeholder="yourname@okhdfcbank"
-                  value={upiId}
-                  onChange={(e) => setUpiId(e.target.value)}
-                  className="w-full bg-white border border-[#ded8cb] text-xs rounded-lg p-2.5 outline-none focus:border-[#b59677]"
-                />
-                <p className="text-[10px] text-zinc-400">
-                  Instant verification via NPCI gateway. Your payment is held securely in escrow until delivery is verified.
-                </p>
-              </div>
-            )}
-
             {/* Place Order CTA */}
-            <div className="pt-4 border-t border-zinc-100">
+            <div className="pt-2">
               <button
                 type="submit"
                 disabled={loading}
@@ -382,11 +342,11 @@ export default function CheckoutPage() {
               >
                 <Lock size={17} />
                 <span>
-                  {loading ? 'Confirming Artwork Acquisition...' : `Authorize Payment (${formatPrice(grandTotal)})`}
+                  {loading ? 'Confirming Order...' : `Place Order — ${formatPrice(grandTotal)} (Pay on Delivery)`}
                 </span>
               </button>
               <p className="text-[11px] text-center text-zinc-400 mt-2">
-                🔒 256-Bit SSL Encrypted &bull; 100% Refundable within 7 Days of Receipt
+                🔒 Secure Order &bull; 7-Day Easy Return Guarantee &bull; Free Insured Delivery
               </p>
             </div>
           </div>

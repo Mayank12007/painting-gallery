@@ -30,6 +30,9 @@ export default function AdminDashboardPage() {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
   const [searchInventory, setSearchInventory] = useState('');
   const [actionNotice, setActionNotice] = useState('');
+  const [lastSeenOrders, setLastSeenOrders] = useState(() => {
+    return parseInt(localStorage.getItem('gallerist_last_seen_orders') || '0', 10);
+  });
 
   // Fetch admin data
   const fetchData = async () => {
@@ -273,14 +276,24 @@ export default function AdminDashboardPage() {
         </button>
 
         <button
-          onClick={() => setActiveTab('orders')}
-          className={`pb-2 text-xs sm:text-sm font-semibold tracking-wide transition border-b-2 ${
+          onClick={() => {
+            setActiveTab('orders');
+            const newCount = orders.length;
+            setLastSeenOrders(newCount);
+            localStorage.setItem('gallerist_last_seen_orders', String(newCount));
+          }}
+          className={`pb-2 text-xs sm:text-sm font-semibold tracking-wide transition border-b-2 flex items-center gap-2 ${
             activeTab === 'orders'
               ? 'border-[#8b5e34] text-[#8b5e34]'
               : 'border-transparent text-zinc-500 hover:text-zinc-900'
           }`}
         >
-          Customer Orders Fulfillment ({orders.length})
+          Customer Orders ({orders.length})
+          {orders.length > lastSeenOrders && (
+            <span className="bg-rose-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full animate-pulse">
+              {orders.length - lastSeenOrders} NEW
+            </span>
+          )}
         </button>
       </div>
 
@@ -449,8 +462,15 @@ export default function AdminDashboardPage() {
                             {order.customerName}
                           </span>
                           <span className="text-[11px] text-zinc-500 block">{order.customerEmail}</span>
-                          <span className="text-[10px] text-zinc-400">
-                            {order.shippingAddress?.city}, {order.shippingAddress?.pincode}
+                          {order.customerPhone && (
+                            <span className="text-[11px] text-zinc-600 block">
+                              Phone: {order.customerPhone}
+                            </span>
+                          )}
+                          <span className="text-[10px] text-zinc-400 block">
+                            {[order.shippingAddress?.street, order.shippingAddress?.city, order.shippingAddress?.state, order.shippingAddress?.pincode, order.shippingAddress?.country]
+                              .filter(Boolean)
+                              .join(', ')}
                           </span>
                         </td>
 

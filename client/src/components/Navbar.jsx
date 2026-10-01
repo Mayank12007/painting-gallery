@@ -11,7 +11,6 @@ import {
   ChevronDown, 
   SlidersHorizontal,
   Sparkles,
-  Phone,
   Eye,
   Menu,
   X
@@ -42,17 +41,11 @@ export default function Navbar({ onOpenUpload }) {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-[#c59b27] animate-pulse"></span>
-            <span className="font-medium text-[#f0e6d2]">New Creations INDIA:</span>
-            <span>100% Original Hand-Painted Artwork &bull; Free Insured Delivery &bull; Certificate of Authenticity</span>
+            <span>100% Original Hand-Painted Artwork &bull; Free Insured Delivery &bull; Certificate of Authenticity Included</span>
           </div>
-
-          <div className="flex items-center gap-4 text-[11px]">
-            {/* Quick Demo Switcher Pill */}
-
-            <div className="hidden md:flex items-center gap-1.5 text-zinc-300">
-              <Phone size={11} className="text-[#c59b27]" />
-              <span>Contact for painting enquiry: +91 9314332200</span>
-            </div>
+          <div className="hidden md:flex items-center gap-1.5 text-zinc-300 text-[11px]">
+            <span className="text-[#c59b27]">✦</span>
+            <span>Pay on Delivery Available across India</span>
           </div>
         </div>
       </div>

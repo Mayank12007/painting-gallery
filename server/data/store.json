@@ -31,12 +31,108 @@
       "avatar": "https://api.dicebear.com/7.x/initials/svg?seed=mayank"
     }
   ],
-  "paintings": [],
+  "paintings": [
+    {
+      "id": "art-1790866984170",
+      "createdAt": "2026-10-01T15:03:04.170Z",
+      "coaNumber": "GLR-2026-5132",
+      "inStock": false,
+      "stockQuantity": 0,
+      "featured": false,
+      "framingOptions": [
+        {
+          "id": "rolled",
+          "name": "Unframed (Rolled in Sturdy Art Tube)",
+          "price": 0,
+          "desc": "Ships safely rolled in heavy PVC tube"
+        },
+        {
+          "id": "stretched",
+          "name": "Stretched Canvas (Gallery Wrapped)",
+          "price": 2000,
+          "desc": "Stretched on solid wood bars, ready to hang"
+        },
+        {
+          "id": "teak_frame",
+          "name": "Handcrafted Teak Floating Frame",
+          "price": 4200,
+          "desc": "Solid teak floating frame with modern reveal"
+        },
+        {
+          "id": "black_frame",
+          "name": "Minimalist Matte Black Frame",
+          "price": 3600,
+          "desc": "Contemporary matte black finish"
+        },
+        {
+          "id": "gold_frame",
+          "name": "Royal Antique Gold Leaf Frame",
+          "price": 5400,
+          "desc": "Hand-finished museum gold leaf frame"
+        }
+      ],
+      "title": "mayank",
+      "artist": "mayank",
+      "artistBio": "Fine artist represented by Gallerist.",
+      "category": "Abstract",
+      "medium": "Oil on Fine Belgian Linen",
+      "style": "Contemporary Fine Art",
+      "orientation": "vertical",
+      "dimensions": "36\" x 48\" (91.4 x 121.9 cm)",
+      "year": 2026,
+      "price": 500,
+      "originalPrice": 1000,
+      "description": "Original artwork verified by Gallerist.",
+      "image": "/uploads/art-1790866984165-Screenshot_2026-09-23_212722.png",
+      "discount": 50
+    }
+  ],
   "orders": [
+    {
+      "id": "ORD-2026-18870",
+      "createdAt": "2026-10-01T15:05:54.332Z",
+      "orderStatus": "Received",
+      "paymentStatus": "Paid",
+      "userId": "usr_1790616526253_4tnt",
+      "customerName": "mayank",
+      "customerEmail": "mayankishpuniyani644@gmail.com",
+      "customerPhone": "9817258887",
+      "shippingAddress": {
+        "street": "Flat 402, Lotus Residency, Indiranagar 100ft Road",
+        "city": "hansi",
+        "state": "haryana",
+        "pincode": "125033",
+        "country": "India"
+      },
+      "items": [
+        {
+          "paintingId": "art-1790866984170",
+          "title": "mayank",
+          "artist": "mayank",
+          "image": "/uploads/art-1790866984165-Screenshot_2026-09-23_212722.png",
+          "price": 500,
+          "framing": {
+            "id": "rolled",
+            "name": "Unframed (Rolled in Sturdy Art Tube)",
+            "price": 0,
+            "desc": "Ships safely rolled in heavy PVC tube"
+          },
+          "quantity": 1,
+          "itemTotal": 500,
+          "coaNumber": "GLR-2026-5132"
+        }
+      ],
+      "subtotal": 500,
+      "shippingFee": 0,
+      "discount": 0,
+      "total": 500,
+      "paymentMethod": "COD",
+      "trackingNumber": "GLR-4521799"
+    },
     {
       "id": "ORD-2026-83560",
       "createdAt": "2026-09-29T08:09:44.863Z",
-      "orderStatus": "Received",
+      "orderStatus": "Delivered",
       "paymentStatus": "Paid",
       "userId": "usr_buyer_1",
       "customerName": "Aarav Sharma",
@@ -72,7 +168,8 @@
       "discount": 0,
       "total": 46000,
       "paymentMethod": "COD",
-      "trackingNumber": "GLR-4664293"
+      "trackingNumber": "GLR-4664293",
+      "updatedAt": "2026-10-01T15:01:52.478Z"
     },
     {
       "id": "ORD-2026-77335",
@@ -315,9 +412,10 @@
       "total": 38200,
       "paymentMethod": "UPI (Google Pay)",
       "paymentStatus": "Paid",
-      "orderStatus": "Dispatched",
+      "orderStatus": "Received",
       "trackingNumber": "BLUEDART-IND-7782193",
-      "createdAt": "2026-09-26T17:11:50.025Z"
+      "createdAt": "2026-09-26T17:11:50.025Z",
+      "updatedAt": "2026-10-01T15:30:54.006Z"
     }
   ]
 }
