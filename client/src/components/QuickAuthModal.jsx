@@ -165,15 +165,6 @@ export default function QuickAuthModal() {
               />
             </div>
           </div>
-          <div className="text-right mt-2">
-  <button
-    type="button"
-    onClick={() => navigate('/forgot-password')}
-    className="text-sm text-[#8b5e34] hover:underline"
-  >
-    Forgot Password?
-  </button>
-</div>
 
           {authMode === 'register' && (
             <div>

@@ -1,0 +1,11 @@
+# Dependencies
+node_modules/
+
+# Environment variables (NEVER commit this!)
+.env
+
+# Uploaded files (now stored in Cloudinary)
+uploads/
+
+# Data files (now stored in MongoDB)
+data/

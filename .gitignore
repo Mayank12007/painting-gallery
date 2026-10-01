@@ -1,6 +1,20 @@
 node_modules/
+server/node_modules/
+client/node_modules/
+
+# Environment variables — NEVER push these!
+server/.env
 .env
-.env.*
-!.env.example
-dist/
-build/
+
+# Local uploads (now on Cloudinary)
+server/uploads/
+
+# Local data (now on MongoDB)
+server/data/
+
+# React build output
+client/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
