@@ -29,6 +29,7 @@ export default function AdminDashboardPage() {
   const [activeTab, setActiveTab] = useState('inventory'); // 'inventory' | 'orders'
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
   const [searchInventory, setSearchInventory] = useState('');
+  const [searchOrders, setSearchOrders] = useState('');
   const [actionNotice, setActionNotice] = useState('');
   const [lastSeenOrders, setLastSeenOrders] = useState(() => {
     return parseInt(localStorage.getItem('gallerist_last_seen_orders') || '0', 10);
@@ -171,6 +172,20 @@ export default function AdminDashboardPage() {
     p.artist.toLowerCase().includes(searchInventory.toLowerCase()) ||
     p.category.toLowerCase().includes(searchInventory.toLowerCase())
   );
+
+  const filteredOrders = orders.filter(o => {
+    const q = searchOrders.toLowerCase();
+    if (!q) return true;
+    return (
+      (o.id || '').toLowerCase().includes(q) ||
+      (o.customerName || '').toLowerCase().includes(q) ||
+      (o.customerEmail || '').toLowerCase().includes(q) ||
+      (o.customerPhone || '').includes(q) ||
+      (o.orderStatus || '').toLowerCase().includes(q) ||
+      (o.paymentMethod || '').toLowerCase().includes(q) ||
+      (o.items || []).some(item => (item.title || '').toLowerCase().includes(q))
+    );
+  });
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
@@ -422,6 +437,20 @@ export default function AdminDashboardPage() {
       {/* TAB 2: ORDERS MANAGEMENT TABLE */}
       {activeTab === 'orders' && (
         <div className="space-y-4">
+          {/* Order Search Bar */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
+            <div className="relative flex-1 max-w-sm">
+              <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-400" />
+              <input
+                type="text"
+                placeholder="Search by name, email, order ID, status..."
+                value={searchOrders}
+                onChange={(e) => setSearchOrders(e.target.value)}
+                className="w-full bg-white border border-[#ded8cb] text-xs rounded-lg pl-9 pr-3 py-2 outline-none focus:border-[#b59677]"
+              />
+            </div>
+            <span className="text-xs text-zinc-500">{filteredOrders.length} orders found</span>
+          </div>
           <div className="bg-white rounded-2xl border border-[#ded8cb] shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
@@ -435,14 +464,14 @@ export default function AdminDashboardPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-zinc-100">
-                  {orders.length === 0 ? (
+                  {filteredOrders.length === 0 ? (
                     <tr>
                       <td colSpan={5} className="py-8 text-center text-zinc-400">
                         No customer orders received yet.
                       </td>
                     </tr>
                   ) : (
-                    orders.map((order) => (
+                    filteredOrders.map((order) => (
                       <tr key={order.id} className="hover:bg-[#faf8f5] transition">
                         <td className="py-3.5 px-4">
                           <span className="font-mono font-bold text-zinc-900 block">

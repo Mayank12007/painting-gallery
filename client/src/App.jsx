@@ -16,6 +16,8 @@ import CheckoutPage from './pages/CheckoutPage';
 import OrderSuccessPage from './pages/OrderSuccessPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
 import CustomerOrdersPage from './pages/CustomerOrdersPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
 
 function AppContent() {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
@@ -36,6 +38,8 @@ function AppContent() {
           <Route path="/order-success/:id" element={<OrderSuccessPage />} />
           <Route path="/admin" element={<AdminDashboardPage />} />
           <Route path="/my-orders" element={<CustomerOrdersPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route path="/reset-password" element={<ResetPasswordPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

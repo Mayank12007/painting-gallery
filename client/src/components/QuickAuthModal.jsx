@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { X, Lock, Mail, User, Phone, ShieldAlert, Sparkles, CheckCircle2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 export default function QuickAuthModal() {
   const { authModalOpen, authMode, setAuthMode, closeAuth, login, register, quickLogin } = useAuth();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -165,6 +167,18 @@ export default function QuickAuthModal() {
               />
             </div>
           </div>
+
+          {authMode === 'login' && (
+            <div className="text-right">
+              <button
+                type="button"
+                onClick={() => { closeAuth(); navigate('/forgot-password'); }}
+                className="text-xs text-[#8b5e34] hover:underline"
+              >
+                Forgot Password?
+              </button>
+            </div>
+          )}
 
           {authMode === 'register' && (
             <div>

@@ -39,7 +39,16 @@ const upload = multer({
 });
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:3000',
+    /\.vercel\.app$/,
+    /\.netlify\.app$/,
+    process.env.FRONTEND_URL
+  ].filter(Boolean),
+  credentials: true
+}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use('/uploads', express.static(uploadsDir));
@@ -242,6 +251,61 @@ app.get('/api/admin/stats', authenticateToken, requireAdmin, async (req, res) =>
     res.json(db.getAdminStats());
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve admin stats' });
+  }
+});
+
+// Forgot Password - generates reset token
+app.post('/api/auth/forgot-password', async (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email) return res.status(400).json({ error: 'Email is required' });
+
+    const user = db.findUserByEmail(email);
+    // Always return success (don't reveal if email exists)
+    if (!user) {
+      return res.json({ message: 'If this email is registered, a reset link has been sent.' });
+    }
+
+    const token = Math.random().toString(36).substring(2) + Date.now().toString(36);
+    db.saveResetToken(email, token);
+
+    // In production: send email. For now, return token in response for dev use
+    const resetLink = `${req.headers.origin || 'http://localhost:5173'}/reset-password?token=${token}`;
+
+    console.log(`🔑 Password reset link for ${email}: ${resetLink}`);
+
+    res.json({
+      message: 'If this email is registered, a reset link has been sent.',
+      // Only include resetLink in development for testing
+      ...(process.env.NODE_ENV !== 'production' && { devResetLink: resetLink })
+    });
+  } catch (error) {
+    console.error('Forgot password error:', error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
+// Reset Password - validates token and sets new password
+app.post('/api/auth/reset-password', async (req, res) => {
+  try {
+    const { token, newPassword } = req.body;
+    if (!token || !newPassword) return res.status(400).json({ error: 'Token and new password are required' });
+    if (newPassword.length < 6) return res.status(400).json({ error: 'Password must be at least 6 characters' });
+
+    const record = db.findResetToken(token);
+    if (!record) return res.status(400).json({ error: 'Invalid or expired reset link. Please request a new one.' });
+
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+    const success = db.updateUserPassword(record.email, hashedPassword);
+
+    if (!success) return res.status(400).json({ error: 'User not found' });
+
+    db.deleteResetToken(token);
+
+    res.json({ message: 'Password updated successfully. You can now sign in with your new password.' });
+  } catch (error) {
+    console.error('Reset password error:', error);
+    res.status(500).json({ error: 'Server error' });
   }
 });
 

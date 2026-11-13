@@ -83,6 +83,41 @@ class Database {
     data.paintings.forEach(p => { categoryCounts[p.category] = (categoryCounts[p.category] || 0) + 1; });
     return { totalPaintings: data.paintings.length, activeListings: data.paintings.filter(p => p.inStock).length, totalOrders: data.orders.length, totalRevenue: data.orders.reduce((sum, o) => sum + (o.total || 0), 0), recentOrders: data.orders.slice(0, 5), categoryCounts };
   }
+  saveResetToken(email, token) {
+    const data = this.read();
+    if (!data.resetTokens) data.resetTokens = [];
+    // Remove any existing token for this email
+    data.resetTokens = data.resetTokens.filter(t => t.email !== email);
+    // Add new token with 1-hour expiry
+    data.resetTokens.push({
+      email: email.toLowerCase(),
+      token,
+      expiresAt: new Date(Date.now() + 60 * 60 * 1000).toISOString()
+    });
+    this.write(data);
+  }
+  findResetToken(token) {
+    const data = this.read();
+    if (!data.resetTokens) return null;
+    const record = data.resetTokens.find(t => t.token === token);
+    if (!record) return null;
+    if (new Date(record.expiresAt) < new Date()) return null; // expired
+    return record;
+  }
+  deleteResetToken(token) {
+    const data = this.read();
+    if (!data.resetTokens) return;
+    data.resetTokens = data.resetTokens.filter(t => t.token !== token);
+    this.write(data);
+  }
+  updateUserPassword(email, hashedPassword) {
+    const data = this.read();
+    const user = data.users.find(u => u.email.toLowerCase() === email.toLowerCase());
+    if (!user) return false;
+    user.password = hashedPassword;
+    this.write(data);
+    return true;
+  }
 }
 
 export const db = new Database();

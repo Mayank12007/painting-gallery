@@ -1,22 +1,15 @@
 services:
   - type: web
-    name: gallerist-art-gallery
+    name: gallerist-backend
     env: node
     plan: free
-    buildCommand: npm run build
-    startCommand: npm start
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
     envVars:
       - key: NODE_ENV
         value: production
-      - key: MONGODB_URI
-        sync: false
-      - key: CLOUDINARY_CLOUD_NAME
-        sync: false
-      - key: CLOUDINARY_API_KEY
-        sync: false
-      - key: CLOUDINARY_API_SECRET
-        sync: false
       - key: JWT_SECRET
-        sync: false
+        value: gallerist2024secretkey
       - key: PORT
         value: 10000
